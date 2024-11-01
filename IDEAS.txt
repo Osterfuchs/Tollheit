@@ -1,0 +1,54 @@
+--Keywords--
+DO
+IF
+WHILE
+NOT
+AND
+OR
+TRUE
+FALSE
+RETURN
+
+--Operators--
+-Arithmetic-
++ addition
+- subtraction
+* multiplication
+/ division
+A% arithmetic modulo
+S% symetric modulo
+-Bitwise-
+& and
+| or
+^ xor
+~ invert
+A< arithmetic leftshift
+A> arithmetic rightshift
+L< logical leftshift
+L> logical leftshift
+R< rotational leftshift
+R> rotational rightshift
+
+--Types--
+i0 signed integer
+u0 unsigned integer
+
+--Blocks--
+
+DO
+	this is its own scope
+	identation is important
+
+WHILE condition DO
+	while loop
+
+IF condition DO
+	if block
+ELSE IF condition DO
+	diffrent if block
+ELSE DO
+	else block
+
+DO
+	do-while loop
+	WHILE condition
