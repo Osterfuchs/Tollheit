@@ -1,5 +1,4 @@
 --Keywords--
-DO
 IF
 WHILE
 NOT
@@ -33,22 +32,3 @@ R> rotational rightshift
 i0 signed integer
 u0 unsigned integer
 
---Blocks--
-
-DO
-	this is its own scope
-	identation is important
-
-WHILE condition DO
-	while loop
-
-IF condition DO
-	if block
-ELSE IF condition DO
-	diffrent if block
-ELSE DO
-	else block
-
-DO
-	do-while loop
-	WHILE condition
