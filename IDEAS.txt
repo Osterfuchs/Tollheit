@@ -1,6 +1,8 @@
 --Keywords--
-IF
-WHILE
+IF THEN
+ELSE
+WHILE DO
+REPEAT UNTIL
 NOT
 AND
 OR
@@ -29,6 +31,7 @@ R< rotational leftshift
 R> rotational rightshift
 
 --Types--
-i0 signed integer
-u0 unsigned integer
-
+SIGN signed integer
+BYTE unsigned integer
+FIXP fixed point rational
+BOOL boolean
