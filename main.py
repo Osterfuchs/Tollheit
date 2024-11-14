@@ -7,10 +7,7 @@ def main():
     # remove comments
     lines = [line.split('#', 1)[0] for line in lines]
     # remove blanks
-    is_not_blank = lambda x: 
-        False if x == "" 
-        else True if x[0] not in [' ', '\n', '\t'] 
-        else is_not_blank(x[1:]);
+    is_not_blank = lambda x: False if x == "" else True if x[0] not in [' ', '\n', '\t'] else is_not_blank(x[1:]);
     lines = list(filter(is_not_blank, lines))
 
     i = 0
