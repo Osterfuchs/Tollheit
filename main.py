@@ -1,4 +1,10 @@
+from enum import Enum
+
 keywords = ["IF", "WHILE"]
+
+class state(Enum):
+    INDENTATION
+    TOKEN
 
 def main():
     f = open("text.txt")
@@ -12,9 +18,28 @@ def main():
 
     i = 0
     for l in lines:
-        print(i, l)
+        depth = 0 #count of identation
+        tokens = [""]
+        current_state = state.INDENTATION
+        while l != "":
+            match current_state:
+                case state.INDENTATION:
+                    if(l[0] == '\t'):
+                        depth+=1
+                    else:
+                        current_state=state.TOKEN
+                        tokens.append()
+                    break
+                case state.TOKEN:
+                    if l[0] in [' ', '\t', '\n']:
+                        tokens.append()
+                    else:
+                        tokens[-1]+=l[0]
+                    break
+            l = l[1:]
+
+        print("line: ", i, " depth: ", depth, " tokens: ", tokens)
         i = i+1
-    
 
 if __name__ == "__main__":
     main()
