@@ -4,9 +4,9 @@
 START
 	limit: BYTE_2 = 10
 	MUT x: SIGN_2 = 0
-
+	 
 	print(str);
-
+	
 	WHILE x < limit
 		IF x A% 2 == 0
 			print(str[x])
