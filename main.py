@@ -3,8 +3,8 @@ from enum import Enum
 keywords = ["IF", "WHILE"]
 
 class state(Enum):
-    INDENTATION
-    TOKEN
+    INDENTATION = None
+    TOKEN = None
 
 def main():
     f = open("text.txt")
@@ -18,9 +18,10 @@ def main():
 
     i = 0
     for l in lines:
+        print(l)
         depth = 0 #count of identation
-        tokens = [""]
         current_state = state.INDENTATION
+        tokens = []
         while l != "":
             match current_state:
                 case state.INDENTATION:
@@ -28,17 +29,15 @@ def main():
                         depth+=1
                     else:
                         current_state=state.TOKEN
-                        tokens.append()
-                    break
+                        tokens.append("")
                 case state.TOKEN:
                     if l[0] in [' ', '\t', '\n']:
-                        tokens.append()
+                        tokens.append("")
                     else:
-                        tokens[-1]+=l[0]
-                    break
+                        tokens[-1] = tokens[-1].join(l[0])
             l = l[1:]
 
-        print("line: ", i, " depth: ", depth, " tokens: ", tokens)
+        print("line: ", i, " depth: ", depth, "\ntokens: ", tokens)
         i = i+1
 
 if __name__ == "__main__":
