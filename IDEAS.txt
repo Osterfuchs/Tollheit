@@ -14,21 +14,19 @@ RETURN
 - subtraction
 * multiplication
 / division
-A% arithmetic modulo
-S% symetric modulo
+ARITHMETIC MODULO
+SYMETRIC MODULO
 -Bitwise-
 & and
 | or
 ^ xor
 ~ invert
-A< arithmetic leftshift
-A> arithmetic rightshift
-L< logical leftshift
-L> logical leftshift
-R< rotational leftshift
-R> rotational rightshift
+ARITHMETIC SHIFT LEFT|RIGHT
+LOGICAL SHIFT LEFT|RIGHT
+ROTATIONAL SHIFT LEFT|RIGHT
 
 --Types--
-i0 signed integer
-u0 unsigned integer
-
+SIGN_ signed integer
+BYTE_ byte that can be interpreted as an unsigned integer
+BOOL_ boolean value (still takes up a whole byte)
+FIXP_ fixed point number
