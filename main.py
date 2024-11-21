@@ -3,8 +3,11 @@ from enum import Enum
 keywords = ["IF", "WHILE"]
 
 class state(Enum):
-    INDENTATION = None
-    TOKEN = None
+    INDENTATION = 0
+    TOKEN = 1
+    UNKNOWN = 2
+    NUMBER_LITERAL = 3
+    
 
 def main():
     f = open("text.txt")
@@ -23,18 +26,27 @@ def main():
         current_state = state.INDENTATION
         tokens = []
         while l != "":
-            match current_state:
-                case state.INDENTATION:
-                    if(l[0] == '\t'):
-                        depth+=1
-                    else:
-                        current_state=state.TOKEN
-                        tokens.append("")
-                case state.TOKEN:
-                    if l[0] in [' ', '\t', '\n']:
-                        tokens.append("")
-                    else:
-                        tokens[-1] = tokens[-1].join(l[0])
+            if l[0] in [' ', '\t', '\n']:
+                if current_state == state.INDENTATION:
+                    depth+=1
+                else:
+                    current_state=state.UNKNOWN
+            elif (l[0] >= 'a' and l[0] <= 'z') or (l[0] >= 'A' and l[0] <= 'Z') or (l[0] == '_'):
+                if current_state == state.TOKEN:
+                    tokens[-1] += l[0]
+                else:
+                    tokens.append(l[0])
+                    current_state = state.TOKEN
+            elif l[0] >= '0' and l[0] <= '9':
+                if current_state == state.NUMBER_LITERAL:
+                    tokens[-1] += l[0]
+                else:
+                    tokens.append(l[0])
+                    current_state = state.NUMBER_LITERAL
+            elif l[0] in ['(', ')', '{', '}', '[', ']']:
+                tokens.append(l[0])
+                current_state = state.UNKNOWN
+
             l = l[1:]
 
         print("line: ", i, " depth: ", depth, "\ntokens: ", tokens)
