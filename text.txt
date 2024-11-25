@@ -2,8 +2,8 @@
 #There are no multiline comments
 
 START
-	limit: BYTE_2 = 10
-	MUT x: SIGN_2 = 0
+	limit: 2 BYTE = 10
+	MUT x: 2 SIGN = 0
 	 
 	print(str);
 	
