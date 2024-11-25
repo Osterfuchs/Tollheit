@@ -1,32 +1,41 @@
 --Keywords--
 IF
+SWITCH
+MATCH
+CASE
 WHILE
-NOT
-AND
-OR
-TRUE
-FALSE
+REPEAT
+CONTINUE
+BREAK
 RETURN
 
 --Operators--
+-Logical-
+TRUE
+FALSE
+NOT
+AND
+OR
+
 -Arithmetic-
 + addition
 - subtraction
 * multiplication
 / division
 ARITHMETIC MODULO
-SYMETRIC MODULO
+SYMMETRIC MODULO
+
 -Bitwise-
 & and
 | or
 ^ xor
 ~ invert
-ARITHMETIC SHIFT LEFT|RIGHT
-LOGICAL SHIFT LEFT|RIGHT
-ROTATIONAL SHIFT LEFT|RIGHT
+ARITHMETIC SHIFT LEFT|RIGHT BY
+LOGICAL SHIFT LEFT|RIGHT BY
+ROTATIONAL SHIFT LEFT|RIGHT BY
 
 --Types--
-SIGN_ signed integer
-BYTE_ byte that can be interpreted as an unsigned integer
-BOOL_ boolean value (still takes up a whole byte)
-FIXP_ fixed point number
+SIGN signed integer
+BYTE byte that can be interpreted as an unsigned integer
+BOOL boolean value (still takes up a whole byte)
+FIXP fixed point number
