@@ -23,17 +23,20 @@ OR
 - subtraction
 * multiplication
 / division
-ARITHMETIC MODULO
-SYMMETRIC MODULO
+AMOD arithmetic modulo
+SMOD symmetric modulo
 
 -Bitwise-
 & and
 | or
 ^ xor
 ~ invert
-ARITHMETIC SHIFT LEFT|RIGHT BY
-LOGICAL SHIFT LEFT|RIGHT BY
-ROTATIONAL SHIFT LEFT|RIGHT BY
+ALS arithmetic left shift
+ARS arithmetic right shift
+LLS logical left shift
+LRS logical right shift
+RLS rotational left shift
+RRS rotational right shift
 
 --Types--
 SIGN signed integer
