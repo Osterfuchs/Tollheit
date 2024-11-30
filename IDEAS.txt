@@ -1,34 +1,41 @@
---Keywords--
-IF THEN
-ELSE
-WHILE DO
-REPEAT UNTIL
-NOT
-AND
-OR
-TRUE
-FALSE
+START
+IF
+SWITCH
+MATCH
+CASE
+WHILE
+REPEAT
+CONTINUE
+BREAK
 RETURN
 
 --Operators--
+-Logical-
+TRUE
+FALSE
+NOT
+AND
+OR
+
 -Arithmetic-
 + addition
 - subtraction
 * multiplication
 / division
-A% arithmetic modulo
-S% symetric modulo
+AMOD arithmetic modulo
+SMOD symmetric modulo
+
 -Bitwise-
 & and
 | or
 ^ xor
 ~ invert
-A< arithmetic leftshift
-A> arithmetic rightshift
-L< logical leftshift
-L> logical leftshift
-R< rotational leftshift
-R> rotational rightshift
+ALS arithmetic left shift
+ARS arithmetic right shift
+LLS logical left shift
+LRS logical right shift
+RLS rotational left shift
+RRS rotational right shift
 
 --Types--
 SIGN signed integer
